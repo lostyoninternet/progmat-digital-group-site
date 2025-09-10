@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Контакты — Progmat Digital Group</title>
+    <meta name="description" content="Свяжитесь с Progmat Digital Group для обсуждения вашего проекта." />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <style>
+      .form { max-width: 600px; }
+      .form-row { display: grid; gap: 8px; margin-bottom: 14px; }
+      .input, textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        color: var(--text);
+      }
+      .input:focus, textarea:focus { outline: 2px solid var(--primary-weak); }
+      textarea { min-height: 140px; resize: vertical; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header reveal is-in">
+      <div class="container navbar">
+        <a class="brand" href="index.html">
+          <img src="public/assets/images/logo.svg" alt="Progmat Digital Group logo" />
+          <span class="brand-name">Progmat Digital Group</span>
+        </a>
+        <nav class="nav">
+          <a href="services.html">Услуги</a>
+          <a href="portfolio.html">Портфолио</a>
+          <a href="about.html">О нас</a>
+          <a href="contact.html">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="kicker reveal">Контакты</div>
+          <h1 class="reveal">Расскажите о задаче</h1>
+          <p class="reveal">Опишите проект, сроки и бюджет (если есть). Мы ответим в течение рабочего дня.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <form class="form reveal" onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами.'); this.reset();">
+            <div class="form-row">
+              <label for="name">Имя</label>
+              <input class="input" id="name" name="name" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input class="input" id="email" name="email" type="email" required />
+            </div>
+            <div class="form-row">
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <a class="brand" href="index.html">
+          <img src="public/assets/images/logo.svg" alt="Progmat logo small" />
+          <span class="brand-name">Progmat Digital Group</span>
+        </a>
+        <div class="small">© 2025 Progmat Digital Group</div>
+      </div>
+    </footer>
+
+    <script src="public/js/main.js"></script>
+  </body>
+</html>
